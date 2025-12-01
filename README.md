@@ -1,8 +1,8 @@
-![Entropy Browser Banner](https://placehold.co/1200x400/050505/e0e0e8?text=THE+ENTROPY+BROWSER&font=monospace)
+![Entropy Browser Banner](./banner.png)
 
-> *"memories cannot be kept"*
+[Live Demo](https://entropy-browser.vercel.app) • [Watch Presentation](https://youtu.be/PAS2gXP3xS4)
 
-## 🌑 Manifesto
+## MANIFESTO
 
 In the digital age, we are obsessed with permanence. We archive, backup, screenshot - desperately clinging to every byte. **The Entropy Browser** challenges this obsession with a radical concept: **ephemeral memory**.
 
@@ -12,41 +12,41 @@ Type a thought. Watch it materialize as physical letters that obey gravity. See 
 
 **Built for [Dreamware 2025](https://dreamwarehack.com)** - where digital experiences meet philosophical inquiry.
 
-## ✨ Features
+## FEATURES
 
-### 🎭 Physics-Driven Typography
-Every letter you type becomes a **rigid body** with real physical properties:
+### Physics-Driven Typography
+Every letter you type becomes a rigid body with real physical properties:
 - Mass, friction, and restitution
 - Gravity pulls them down to pile at the bottom
 - Walls contain the chaos within the viewport
 
-### 🌊 Fluid Background (Dream Fragment: Fluid Interface)
-A **GLSL shader-based energy field** that evolves organically over time.
+### Fluid Background
+A GLSL shader-based energy field that evolves organically over time.
 - Mathematical noise patterns create a "breathing" effect
 - Reacts to time, creating a subtle, hypnotic backdrop
 - "Alive" visuals that never repeat exactly
 
-### 🔊 Generative Soundscapes (Dream Fragment: Voice of the Machine)
+### Generative Soundscapes
 The system speaks back through audio:
 - **Ambient Drone**: A low-frequency hum that grounds the experience
 - **Reactive Typing**: Unique sound samples for keystrokes, pitched randomly to create a non-repetitive melody
 - **Mute Control**: Toggle the auditory hallucinations at will
 
-### 🖱️ Interactive Decay
-Your cursor creates a **repulsion field** that scatters the debris of your memories. Move through the fallen letters and watch them scatter like disturbed thoughts.
+### Interactive Decay
+Your cursor creates a repulsion field that scatters the debris of your memories. Move through the fallen letters and watch them scatter like disturbed thoughts.
 
-### 🎨 Atmospheric Design
+### Atmospheric Design
 - **CRT Scanlines**: subtle retro display artifacts
 - **Vignette Overlay**: dramatic edge darkening
 - **Glowing Text**: ethereal letter rendering with shadows
 - **Custom Cursor**: crosshair design that enhances the mood
 - **Ambient Particles**: floating dust in the void
 
-### 📊 Live Statistics
-- Track **fragments still falling** in real-time
-- Count **letters lost to entropy** forever
+### Live Statistics
+- Track fragments still falling in real-time
+- Count letters lost to entropy forever
 
-## 🛠️ Tech Stack
+## TECH STACK
 
 Built with modern web technologies for maximum performance:
 
@@ -62,7 +62,7 @@ Built with modern web technologies for maximum performance:
 
 **Font**: JetBrains Mono - chosen for its monospace clarity and coding aesthetic.
 
-## 🏗️ Architecture
+## ARCHITECTURE
 
 ```
 app/
@@ -93,7 +93,7 @@ app/
 - **Memoized Components**: All UI components wrapped with `memo()` to prevent unnecessary re-renders
 - **Throttled State Updates**: Physics state updates throttled to 100ms to prevent React overwhelm
 
-## 🚀 Getting Started
+## GETTING STARTED
 
 ### Prerequisites
 
@@ -130,7 +130,7 @@ Open [http://localhost:3000](http://localhost:3000) and begin releasing your mem
 | `pnpm format` | Format code with Prettier |
 | `pnpm format:check` | Check formatting |
 
-## 🎛️ Configuration
+## CONFIGURATION
 
 Physics and visual constants are centralized in `app/components/entropy/constants.ts`:
 
@@ -165,7 +165,7 @@ Physics and visual constants are centralized in `app/components/entropy/constant
 | `trailOpacity` | `0.3` | Motion blur intensity |
 | `particleCount` | `3` | Ambient dust particles per frame |
 
-## 🎨 Theming
+## THEMING
 
 The color system uses **OKLCH color space** for perceptual uniformity:
 
@@ -176,7 +176,7 @@ The color system uses **OKLCH color space** for perceptual uniformity:
 --color-accent: oklch(0.77 0.02 270 / 0.9); /* Highlighted elements */
 ```
 
-## 🌟 The Philosophy
+## PHILOSOPHY
 
 The Entropy Browser is an **anti-app**. In a world of infinite scrollback, cloud sync, and "memories" features, this project asks: *what if we designed for forgetting?*
 
@@ -188,7 +188,7 @@ Every interaction is a small act of letting go:
 
 This is software as meditation. A digital memento mori.
 
-## 🤝 Contributing
+## CONTRIBUTING
 
 Entropy is inevitable, but improvements are welcome.
 
@@ -198,18 +198,10 @@ Entropy is inevitable, but improvements are welcome.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## LICENSE
 
 MIT © [SujalXplores](https://github.com/SujalXplores)
 
 ---
 
-<p align="center">
-  <i>Built with 💭 for Dreamware 2025</i>
-</p>
-
-<p align="center">
-  <a href="https://github.com/SujalXplores/entropy-browser">⭐ Star this project</a> •
-  <a href="https://github.com/SujalXplores/entropy-browser/issues">🐛 Report Bug</a> •
-  <a href="https://github.com/SujalXplores/entropy-browser/issues">✨ Request Feature</a>
-</p>
+[Star this project](https://github.com/SujalXplores/entropy-browser) • [Report Bug](https://github.com/SujalXplores/entropy-browser/issues) • [Request Feature](https://github.com/SujalXplores/entropy-browser/issues)
