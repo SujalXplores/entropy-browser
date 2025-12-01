@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  --color-background: #050505;
+  --color-foreground: #e0e0e8;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+    height: 100%;
+    overflow: hidden;
+    cursor: crosshair;
+  }
+  html {
+    height: 100%;
+  }
+}
+
+/* Custom animations for entropy effect */
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  75% {
+    opacity: 0.98;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 4s infinite ease-in-out;
+}
+
+::selection {
+  background: rgba(150, 150, 170, 0.3);
+  color: rgba(220, 220, 240, 1);
+}
