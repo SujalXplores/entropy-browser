@@ -80,10 +80,13 @@ export function useCanvasRenderer({
       ctx.shadowColor = `rgba(180, 180, 200, ${opacity * 0.8})`;
       ctx.shadowBlur = opacity * 15;
 
-      ctx.fillStyle = `rgba(60, 60, 80, ${opacity * 0.3})`;
+      const time = Date.now() * 0.001;
+      const hue = (position.x * 0.1 + position.y * 0.1 + time * 20) % 360;
+      
+      ctx.fillStyle = `hsla(${hue}, 70%, 70%, ${opacity * 0.3})`;
       ctx.fillText(letter, 2, 2);
 
-      ctx.fillStyle = `rgba(200, 200, 220, ${opacity})`;
+      ctx.fillStyle = `hsla(${hue}, 80%, 85%, ${opacity})`;
       ctx.fillText(letter, 0, 0);
 
       ctx.restore();

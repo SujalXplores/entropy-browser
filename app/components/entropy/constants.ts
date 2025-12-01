@@ -1,5 +1,5 @@
 export const PHYSICS = {
-  gravity: { x: 0, y: 0.8 },
+  gravity: { x: 0, y: 0.4 },
   decayStart: 8000,
   decayDuration: 4000,
   repulsionRadius: 120,
@@ -18,9 +18,9 @@ export const CANVAS = {
 } as const;
 
 export const BODY_OPTIONS = {
-  friction: 0.6,
-  frictionAir: 0.02,
-  restitution: 0.3,
+  friction: 0.5,
+  frictionAir: 0.05,
+  restitution: 0.5,
   density: 0.002,
   chamfer: { radius: 3 },
 } as const;

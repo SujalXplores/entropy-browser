@@ -10,7 +10,9 @@ import {
   Instruction,
   VignetteOverlay,
   ScanLinesOverlay,
+  MuteToggle,
 } from "./components/entropy";
+import { audioManager } from "./components/entropy/audio-manager";
 
 export default function Page() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -64,6 +66,21 @@ export default function Page() {
     return () => stopLoop();
   }, [startLoop, stopLoop]);
 
+  useEffect(() => {
+    const initAudio = () => {
+      audioManager.initialize();
+      window.removeEventListener("click", initAudio);
+      window.removeEventListener("keydown", initAudio);
+    };
+
+    window.addEventListener("click", initAudio);
+    window.addEventListener("keydown", initAudio);
+    return () => {
+      window.removeEventListener("click", initAudio);
+      window.removeEventListener("keydown", initAudio);
+    };
+  }, []);
+
   const handleMemorySubmit = useCallback(
     (text: string) => createTextBodies(text),
     [createTextBodies]
@@ -80,6 +97,7 @@ export default function Page() {
       </div>
       <VignetteOverlay />
       <ScanLinesOverlay />
+      <MuteToggle />
     </div>
   );
 }
