@@ -3,16 +3,16 @@
 
 @theme inline {
   --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
-  --color-background: #050505;
-  --color-foreground: #e0e0e8;
-  --color-muted: rgba(160, 160, 180, 0.85);
-  --color-muted-dark: rgba(145, 145, 165, 0.9);
-  --color-accent: rgba(180, 180, 200, 0.9);
-  --color-accent-glow: rgba(100, 100, 120, 0.3);
-  --color-input: rgba(220, 220, 235, 0.95);
-  --color-input-glow: rgba(200, 200, 220, 0.3);
-  --color-border: rgba(100, 100, 120, 0.5);
-  --color-border-active: rgba(170, 170, 190, 0.7);
+  --color-background: oklch(0.07 0 0);
+  --color-foreground: oklch(0.91 0.01 270);
+  --color-muted: oklch(0.7 0.02 270 / 0.85);
+  --color-muted-dark: oklch(0.65 0.02 270 / 0.9);
+  --color-accent: oklch(0.77 0.02 270 / 0.9);
+  --color-accent-glow: oklch(0.5 0.02 270 / 0.3);
+  --color-input: oklch(0.92 0.01 270 / 0.95);
+  --color-input-glow: oklch(0.85 0.02 270 / 0.3);
+  --color-border: oklch(0.5 0.02 270 / 0.5);
+  --color-border-active: oklch(0.75 0.02 270 / 0.7);
 }
 
 @layer base {
@@ -64,12 +64,12 @@ textarea {
 }
 
 ::selection {
-  background: rgba(150, 150, 170, 0.3);
-  color: rgba(220, 220, 240, 1);
+  background: oklch(0.67 0.02 270 / 0.3);
+  color: oklch(0.92 0.02 270);
 }
 
 .vignette {
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: radial-gradient(ellipse at center, transparent 0%, oklch(0 0 0 / 0.4) 100%);
 }
 
 .scanlines {
@@ -77,8 +77,8 @@ textarea {
     0deg,
     transparent,
     transparent 2px,
-    rgba(255, 255, 255, 0.03) 2px,
-    rgba(255, 255, 255, 0.03) 4px
+    oklch(1 0 0 / 0.03) 2px,
+    oklch(1 0 0 / 0.03) 4px
   );
 }
 
