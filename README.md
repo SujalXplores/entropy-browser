@@ -20,6 +20,18 @@ Every letter you type becomes a **rigid body** with real physical properties:
 - Gravity pulls them down to pile at the bottom
 - Walls contain the chaos within the viewport
 
+### 🌊 Fluid Background (Dream Fragment: Fluid Interface)
+A **GLSL shader-based energy field** that evolves organically over time.
+- Mathematical noise patterns create a "breathing" effect
+- Reacts to time, creating a subtle, hypnotic backdrop
+- "Alive" visuals that never repeat exactly
+
+### 🔊 Generative Soundscapes (Dream Fragment: Voice of the Machine)
+The system speaks back through audio:
+- **Ambient Drone**: A low-frequency hum that grounds the experience
+- **Reactive Typing**: Unique sound samples for keystrokes, pitched randomly to create a non-repetitive melody
+- **Mute Control**: Toggle the auditory hallucinations at will
+
 ### 🖱️ Interactive Decay
 Your cursor creates a **repulsion field** that scatters the debris of your memories. Move through the fallen letters and watch them scatter like disturbed thoughts.
 
@@ -42,8 +54,10 @@ Built with modern web technologies for maximum performance:
 |------------|---------|---------|
 | [Next.js](https://nextjs.org/) | 16.0.6 | React framework with App Router |
 | [React](https://react.dev/) | 19.2.0 | UI library with React Compiler |
-| [Tailwind CSS](https://tailwindcss.com/) | 4.1.17 | Utility-first CSS framework |
+| [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) | 8.x | React renderer for Three.js |
+| [Three.js](https://threejs.org/) | 0.170+ | 3D Library & Shaders |
 | [Matter.js](https://brm.io/matter-js/) | 0.20.0 | 2D physics engine |
+| [Tailwind CSS](https://tailwindcss.com/) | 4.1.17 | Utility-first CSS framework |
 | [TypeScript](https://www.typescriptlang.org/) | 5.9.3 | Type-safe JavaScript |
 
 **Font**: JetBrains Mono - chosen for its monospace clarity and coding aesthetic.
@@ -60,10 +74,12 @@ app/
         ├── index.ts         # Public exports
         ├── types.ts         # TypeScript interfaces
         ├── constants.ts     # Physics & canvas configuration
+        ├── audio-manager.ts # Singleton audio controller
         ├── hooks/
         │   ├── use-physics-engine.ts   # Matter.js integration
         │   └── use-canvas-renderer.ts  # Custom rendering loop
         └── ui/
+            ├── energy-field.tsx # GLSL Shader background
             ├── header.tsx       # Title component
             ├── memory-input.tsx # Text input form
             ├── stats-display.tsx # Live statistics
