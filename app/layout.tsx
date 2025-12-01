@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "generative art",
     "physics",
     "dreamware",
-  ]
+  ],
 };
 
 export const viewport: Viewport = {

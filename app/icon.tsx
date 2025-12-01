@@ -36,6 +36,6 @@ export default function Icon() {
     </div>,
     {
       ...size,
-    },
+    }
   );
 }
