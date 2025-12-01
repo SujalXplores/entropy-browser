@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { audioManager } from "../audio-manager";
 
 export function MuteToggle() {
-  const [isMuted, setIsMuted] = useState(true); // Default to true until hydrated/checked
+  const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
     setIsMuted(audioManager.getMutedState());
   }, []);
 
-  const toggle = () => {
+  const toggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
     const newState = audioManager.toggleMute();
     setIsMuted(newState);
   };

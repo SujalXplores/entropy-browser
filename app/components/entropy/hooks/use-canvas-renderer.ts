@@ -34,20 +34,15 @@ export function useCanvasRenderer({
     const { gridSize, trailOpacity, particleCount } = CANVAS;
     const { repulsionRadius } = PHYSICS;
 
-    ctx.fillStyle = `rgba(5, 5, 5, ${trailOpacity})`;
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.fillStyle = `rgba(0, 0, 0, ${trailOpacity})`;
     ctx.fillRect(0, 0, width, height);
+    
+    ctx.globalCompositeOperation = "source-over";
 
     ctx.strokeStyle = "rgba(30, 30, 30, 0.3)";
     ctx.lineWidth = 0.5;
     ctx.beginPath();
-    for (let x = 0; x < width; x += gridSize) {
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x, height);
-    }
-    for (let y = 0; y < height; y += gridSize) {
-      ctx.moveTo(0, y);
-      ctx.lineTo(width, y);
-    }
     ctx.stroke();
 
     const gradient = ctx.createRadialGradient(
@@ -80,13 +75,11 @@ export function useCanvasRenderer({
       ctx.shadowColor = `rgba(180, 180, 200, ${opacity * 0.8})`;
       ctx.shadowBlur = opacity * 15;
 
-      const time = Date.now() * 0.001;
-      const hue = (position.x * 0.1 + position.y * 0.1 + time * 20) % 360;
-      
-      ctx.fillStyle = `hsla(${hue}, 70%, 70%, ${opacity * 0.3})`;
+      // Shadow/Glow
+      ctx.fillStyle = `rgba(140, 140, 180, ${opacity * 0.3})`;
       ctx.fillText(letter, 2, 2);
 
-      ctx.fillStyle = `hsla(${hue}, 80%, 85%, ${opacity})`;
+      ctx.fillStyle = `rgba(240, 240, 255, ${opacity})`;
       ctx.fillText(letter, 0, 0);
 
       ctx.restore();

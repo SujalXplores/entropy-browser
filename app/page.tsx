@@ -11,7 +11,9 @@ import {
   VignetteOverlay,
   ScanLinesOverlay,
   MuteToggle,
+  ShaderPlane,
 } from "./components/entropy";
+import { Canvas } from "@react-three/fiber";
 import { audioManager } from "./components/entropy/audio-manager";
 
 export default function Page() {
@@ -87,7 +89,12 @@ export default function Page() {
   );
 
   return (
-    <div ref={containerRef} className="bg-background relative h-screen w-full overflow-hidden">
+    <div ref={containerRef} className="relative h-screen w-full overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <Canvas camera={{ position: [0, 0, 2] }}>
+          <ShaderPlane position={[0, 0, 0]} />
+        </Canvas>
+      </div>
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
         <Header />

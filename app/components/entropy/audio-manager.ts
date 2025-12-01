@@ -38,15 +38,19 @@ class AudioManager {
 
   public startAmbient() {
     if (this.ambient && !this.isMuted) {
-      this.ambient.play().catch((e) => {
-        console.log("Audio autoplay blocked, waiting for interaction:", e);
-      });
+      const playPromise = this.ambient.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((e) => {
+          console.log("Audio autoplay blocked or interrupted:", e);
+        });
+      }
     }
   }
 
   public stopAmbient() {
     if (this.ambient) {
       this.ambient.pause();
+      this.ambient.currentTime = 0; // Optional: reset to start
     }
   }
 

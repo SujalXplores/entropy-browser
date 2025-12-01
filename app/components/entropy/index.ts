@@ -5,5 +5,6 @@ export { MemoryInput } from "./ui/memory-input";
 export { StatsDisplay } from "./ui/stats-display";
 export { Instruction, VignetteOverlay, ScanLinesOverlay } from "./ui/overlays";
 export * from "./ui/mute-toggle";
+export * from "./ui/energy-field";
 export type { LetterBody, Dimensions, MousePosition } from "./types";
 export { PHYSICS, CANVAS } from "./constants";
